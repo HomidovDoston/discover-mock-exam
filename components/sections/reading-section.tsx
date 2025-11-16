@@ -882,8 +882,10 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
                 </div>
               </div>
 
+              {/* //////////////////////////////////////////// */}
+
               <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-300">
-                <h3 className="text-lg font-bold mb-4">Questions 27–31</h3>
+                <h3 className="text-lg font-bold mb-4">Questions 32–35</h3>
                 <p className="text-sm mb-4">
                   Complete the summary using the list of words,{" "}
                   <strong>A–H</strong>, below.
@@ -940,15 +942,6 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
                       placeholder="30"
                     />{" "}
                     to convince him.
-                    <input
-                      type="text"
-                      value={answers["31"] || ""}
-                      onChange={(e) => handleAnswer("31", e.target.value)}
-                      className="w-16 border-2 border-gray-300 rounded-lg px-2 py-1 text-center font-bold text-lg focus:border-blue-500 mx-1"
-                      maxLength={1}
-                      placeholder="31"
-                    />{" "}
-                    to convince him.
                   </p>
                 </div>
 
@@ -970,54 +963,7 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
                   ))}
                 </div>
               </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-300">
-                <h3 className="text-lg font-bold mb-4">Questions 32–35</h3>
-                <p className="text-sm mb-4">
-                  Complete the summary below. Choose{" "}
-                  <strong>ONE WORD ONLY</strong> from the passage for each
-                  answer.
-                </p>
-
-                <div className="bg-gray-100 p-4 rounded-lg mb-6 border border-gray-400">
-                  <p className="text-sm">
-                    The OPOL approach requires parents to{" "}
-                    <input
-                      type="text"
-                      value={answers["32"] || ""}
-                      onChange={(e) => handleAnswer("32", e.target.value)}
-                      className="w-32 border-b-2 border-gray-400 focus:border-blue-600 outline-none px-1 text-center mx-1"
-                      placeholder="32"
-                    />{" "}
-                    children if they mix languages. However, many parents find
-                    this{" "}
-                    <input
-                      type="text"
-                      value={answers["33"] || ""}
-                      onChange={(e) => handleAnswer("33", e.target.value)}
-                      className="w-32 border-b-2 border-gray-400 focus:border-blue-600 outline-none px-1 text-center mx-1"
-                      placeholder="33"
-                    />{" "}
-                    because they want to have a{" "}
-                    <input
-                      type="text"
-                      value={answers["34"] || ""}
-                      onChange={(e) => handleAnswer("34", e.target.value)}
-                      className="w-32 border-b-2 border-gray-400 focus:border-blue-600 outline-none px-1 text-center mx-1"
-                      placeholder="34"
-                    />{" "}
-                    conversation. In addition, children may show{" "}
-                    <input
-                      type="text"
-                      value={answers["35"] || ""}
-                      onChange={(e) => handleAnswer("35", e.target.value)}
-                      className="w-32 border-b-2 border-gray-400 focus:border-blue-600 outline-none px-1 text-center mx-1"
-                      placeholder="35"
-                    />{" "}
-                    when corrected.
-                  </p>
-                </div>
-              </div>
+              {/* ///////////////////////// */}
 
               <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-300">
                 <h3 className="text-lg font-bold mb-4">Questions 36–40</h3>
