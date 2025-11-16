@@ -882,6 +882,103 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-300">
+                <h3 className="text-lg font-bold mb-4">Questions 27–31</h3>
+                <p className="text-sm mb-4">
+                  Choose the correct letter, <strong>A, B, C</strong> or{" "}
+                  <strong>D</strong>.
+                </p>
+                <p className="text-sm mb-4">
+                  Write the correct letter in boxes 27–31 on your answer sheet.
+                </p>
+                <div className="space-y-6">
+                  {[
+                    {
+                      id: "27",
+                      question:
+                        "What does the writer say about families in which the parents speak different languages?",
+                      options: [
+                        "They constantly research ways to help their children learn both languages.",
+                        "They realise the importance of their role in their children’s language learning.",
+                        "They prioritise their children’s language learning over their own.",
+                        "They find the OPOL approach the easiest to adopt.",
+                      ],
+                    },
+                    {
+                      id: "28",
+                      question:
+                        "The writer uses the term ‘received wisdom’ in the first paragraph to illustrate that",
+                      options: [
+                        "the success of OPOL depends on the languages spoken by the parents.",
+                        "OPOL fails if the parents are not consistent in its use.",
+                        "one generally accepted principle of OPOL is incorrect.",
+                        "there has been a lack of research into OPOL.",
+                      ],
+                    },
+                    {
+                      id: "29",
+                      question:
+                        "The mothers who took part in the writer’s research",
+                      options: [
+                        "compensated for the fact that their children were exposed to more English than Japanese.",
+                        "took their children’s language learning more seriously than their partners did.",
+                        "used language learning to increase the time they spent with their children.",
+                        "were reluctant for their partners to speak Japanese to their children.",
+                      ],
+                    },
+                    {
+                      id: "30",
+                      question:
+                        "The writer says that the children in her study",
+                      options: [
+                        "preferred to use Japanese exclusively for communicating with their mothers.",
+                        "understood their mothers better as their knowledge of Japanese increased.",
+                        "argued about things that would be unimportant for monolingual children.",
+                        "used language in a way that is uncommon.",
+                      ],
+                    },
+                    {
+                      id: "31",
+                      question:
+                        "What does the writer suggest about correcting children who are learning to be bilingual?",
+                      options: [
+                        "It is usually avoided if it causes bad feeling.",
+                        "Parents tend to prioritise it over maintaining a conversation.",
+                        "It is unnecessary with the OPOL method of learning.",
+                        "Parents are less likely to do it if they speak both languages.",
+                      ],
+                    },
+                  ].map((q, index) => (
+                    <div key={q.id}>
+                      <p className="font-medium mb-2">
+                        {q.id} {q.question}
+                      </p>
+                      <div className="space-y-2">
+                        {q.options.map((option, optIndex) => (
+                          <div
+                            key={optIndex}
+                            className="flex items-start gap-2"
+                          >
+                            <span className="font-bold">
+                              {String.fromCharCode(65 + optIndex)}
+                            </span>
+                            <span>{option}</span>
+                          </div>
+                        ))}
+                      </div>
+                      <input
+                        type="text"
+                        value={answers[q.id] || ""}
+                        onChange={(e) => handleAnswer(q.id, e.target.value)}
+                        className="mt-2 w-16 border-2 border-gray-300 rounded-lg px-2 py-1 text-center font-bold text-lg focus:border-blue-500 outline-none"
+                        maxLength={1}
+                        placeholder="A-D"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {/* //////////////////////////////////////////// */}
 
               <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-300">
@@ -891,7 +988,7 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
                   <strong>A–H</strong>, below.
                 </p>
                 <p className="text-sm mb-4">
-                  Write the correct letter, <strong>A–H</strong>, in boxes 27–31
+                  Write the correct letter, <strong>A–H</strong>, in boxes 32–35
                   on your answer sheet.
                 </p>
 
@@ -905,41 +1002,41 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
                     communication{" "}
                     <input
                       type="text"
-                      value={answers["27"] || ""}
-                      onChange={(e) => handleAnswer("27", e.target.value)}
+                      value={answers["32"] || ""}
+                      onChange={(e) => handleAnswer("32", e.target.value)}
                       className="w-16 border-2 border-gray-300 rounded-lg px-2 py-1 text-center font-bold text-lg focus:border-blue-500 mx-1"
                       maxLength={1}
-                      placeholder="27"
+                      placeholder="32"
                     />{" "}
                     to change his mind. First, she expressed her{" "}
                     <input
                       type="text"
-                      value={answers["28"] || ""}
-                      onChange={(e) => handleAnswer("28", e.target.value)}
+                      value={answers["33"] || ""}
+                      onChange={(e) => handleAnswer("33", e.target.value)}
                       className="w-16 border-2 border-gray-300 rounded-lg px-2 py-1 text-center font-bold text-lg focus:border-blue-500 mx-1"
                       maxLength={1}
-                      placeholder="28"
+                      placeholder="33"
                     />{" "}
                     in gentler, more polite language, and pretended to be about
                     to cry. Having switched from English to Japanese, she
                     exploited{" "}
                     <input
                       type="text"
-                      value={answers["29"] || ""}
-                      onChange={(e) => handleAnswer("29", e.target.value)}
+                      value={answers["34"] || ""}
+                      onChange={(e) => handleAnswer("34", e.target.value)}
                       className="w-16 border-2 border-gray-300 rounded-lg px-2 py-1 text-center font-bold text-lg focus:border-blue-500 mx-1"
                       maxLength={1}
-                      placeholder="29"
+                      placeholder="34"
                     />{" "}
                     of Japanese culture, such as reminding him of his obligation
                     to her as her brother. She succeeded in her{" "}
                     <input
                       type="text"
-                      value={answers["30"] || ""}
-                      onChange={(e) => handleAnswer("30", e.target.value)}
+                      value={answers["35"] || ""}
+                      onChange={(e) => handleAnswer("35", e.target.value)}
                       className="w-16 border-2 border-gray-300 rounded-lg px-2 py-1 text-center font-bold text-lg focus:border-blue-500 mx-1"
                       maxLength={1}
-                      placeholder="30"
+                      placeholder="35"
                     />{" "}
                     to convince him.
                   </p>
