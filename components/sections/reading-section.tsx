@@ -1,4 +1,3 @@
-// ./sections/reading-section.tsx
 "use client";
 
 import { useState } from "react";
@@ -25,7 +24,7 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50 p-4">
+    <div className="min-h-screen bg-linear-to-br from-purple-50 via-blue-50 to-cyan-50 p-4">
       <div className="max-w-5xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6 mb-4 sticky top-0 z-50 border-2 border-gray-300">
           <div className="flex items-center justify-between mb-3">
@@ -46,7 +45,7 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
           </div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 transition-all duration-500"
+              className="h-full bg-linear-to-r from-blue-500 via-purple-500 to-cyan-500 transition-all duration-500"
               style={{ width: `${(completed / total) * 100}%` }}
             />
           </div>
@@ -58,7 +57,7 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
               <TabsTrigger
                 key={id}
                 value={id}
-                className="text-xs md:text-sm font-semibold data-[state=active]:bg-gradient-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg cursor-pointer"
+                className="text-xs md:text-sm font-semibold data-[state=active]:bg-linear-to-r data-[state=active]:from-blue-600 data-[state=active]:to-purple-600 data-[state=active]:text-white rounded-lg cursor-pointer"
               >
                 Passage {i + 1}
               </TabsTrigger>
@@ -885,101 +884,101 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
               <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-300">
                 <h3 className="text-lg font-bold mb-4">Questions 27–31</h3>
                 <p className="text-sm mb-4">
-                  Choose the correct letter, <strong>A, B, C</strong> or{" "}
-                  <strong>D</strong>.
+                  Choose the correct letter, <strong>A</strong>,{" "}
+                  <strong>B</strong>, <strong>C</strong>, or <strong>D</strong>.
                 </p>
                 <p className="text-sm mb-4">
-                  Write the correct letter in boxes 27–31 on your answer sheet.
+                  Write the correct letter, <strong>A–D</strong>, in boxes 27–31
+                  on your answer sheet.
                 </p>
-                <div className="space-y-6">
+
+                <div className="space-y-4">
                   {[
                     {
                       id: "27",
-                      question:
-                        "What does the writer say about families in which the parents speak different languages?",
+                      text: "What does the writer say about families where parents speak different languages?",
                       options: [
-                        "They constantly research ways to help their children learn both languages.",
-                        "They realise the importance of their role in their children’s language learning.",
-                        "They prioritise their children’s language learning over their own.",
-                        "They find the OPOL approach the easiest to adopt.",
+                        "A They should avoid mixing languages completely.",
+                        "B They generally want their children to learn both languages.",
+                        "C They find it difficult to maintain consistency.",
+                        "D They prefer the OPOL approach over other methods.",
                       ],
                     },
                     {
                       id: "28",
-                      question:
-                        "The writer uses the term ‘received wisdom’ in the first paragraph to illustrate that",
+                      text: "In the first paragraph, what does the writer mean by the term 'received wisdom' in relation to the OPOL approach?",
                       options: [
-                        "the success of OPOL depends on the languages spoken by the parents.",
-                        "OPOL fails if the parents are not consistent in its use.",
-                        "one generally accepted principle of OPOL is incorrect.",
-                        "there has been a lack of research into OPOL.",
+                        "A It is a scientifically proven method.",
+                        "B It is a widely accepted but potentially incorrect belief.",
+                        "C It is the only effective way to raise bilingual children.",
+                        "D It requires strict adherence to language separation.",
                       ],
                     },
                     {
                       id: "29",
-                      question:
-                        "The mothers who took part in the writer’s research",
+                      text: "What does the writer say about the mothers who participated in the research regarding their children's language exposure?",
                       options: [
-                        "compensated for the fact that their children were exposed to more English than Japanese.",
-                        "took their children’s language learning more seriously than their partners did.",
-                        "used language learning to increase the time they spent with their children.",
-                        "were reluctant for their partners to speak Japanese to their children.",
+                        "A They were fluent in both languages equally.",
+                        "B They created dedicated time for Japanese language learning.",
+                        "C They preferred English for communication at home.",
+                        "D They found it difficult to teach Japanese to their children.",
                       ],
                     },
                     {
                       id: "30",
-                      question:
-                        "The writer says that the children in her study",
+                      text: "What does the writer say about the children in the study regarding their use of Japanese?",
                       options: [
-                        "preferred to use Japanese exclusively for communicating with their mothers.",
-                        "understood their mothers better as their knowledge of Japanese increased.",
-                        "argued about things that would be unimportant for monolingual children.",
-                        "used language in a way that is uncommon.",
+                        "A They used it only for formal communication.",
+                        "B They connected it emotionally with their mother.",
+                        "C They avoided using it when upset.",
+                        "D They preferred English in all situations.",
                       ],
                     },
                     {
                       id: "31",
-                      question:
-                        "What does the writer suggest about correcting children who are learning to be bilingual?",
+                      text: "What does the writer suggest about correcting bilingual children?",
                       options: [
-                        "It is usually avoided if it causes bad feeling.",
-                        "Parents tend to prioritise it over maintaining a conversation.",
-                        "It is unnecessary with the OPOL method of learning.",
-                        "Parents are less likely to do it if they speak both languages.",
+                        "A Parents should always correct language mixing immediately.",
+                        "B Meaningful conversation is more important than constant correction.",
+                        "C Children should be corrected every time they mix languages.",
+                        "D Correction is essential for proper language development.",
                       ],
                     },
-                  ].map((q, index) => (
-                    <div key={q.id}>
-                      <p className="font-medium mb-2">
-                        {q.id} {q.question}
-                      </p>
-                      <div className="space-y-2">
-                        {q.options.map((option, optIndex) => (
-                          <div
-                            key={optIndex}
-                            className="flex items-start gap-2"
+                  ].map((q) => (
+                    <div
+                      key={q.id}
+                      className="border-2 border-gray-200 rounded-lg p-4 bg-gray-50"
+                    >
+                      <div className="flex items-start gap-3 mb-3">
+                        <span className="font-bold text-lg">{q.id}</span>
+                        <span className="flex-1 text-sm font-medium">
+                          {q.text}
+                        </span>
+                      </div>
+                      <div className="ml-8 space-y-2">
+                        {q.options.map((option, idx) => (
+                          <label
+                            key={idx}
+                            className="flex items-center gap-2 cursor-pointer hover:bg-gray-100 p-2 rounded"
                           >
-                            <span className="font-bold">
-                              {String.fromCharCode(65 + optIndex)}
-                            </span>
-                            <span>{option}</span>
-                          </div>
+                            <input
+                              type="radio"
+                              name={q.id}
+                              value={option.charAt(0)}
+                              checked={answers[q.id] === option.charAt(0)}
+                              onChange={(e) =>
+                                handleAnswer(q.id, e.target.value)
+                              }
+                              className="w-4 h-4 text-blue-600 focus:ring-blue-500"
+                            />
+                            <span className="text-sm">{option}</span>
+                          </label>
                         ))}
                       </div>
-                      <input
-                        type="text"
-                        value={answers[q.id] || ""}
-                        onChange={(e) => handleAnswer(q.id, e.target.value)}
-                        className="mt-2 w-16 border-2 border-gray-300 rounded-lg px-2 py-1 text-center font-bold text-lg focus:border-blue-500 outline-none"
-                        maxLength={1}
-                        placeholder="A-D"
-                      />
                     </div>
                   ))}
                 </div>
               </div>
-
-              {/* //////////////////////////////////////////// */}
 
               <div className="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-300">
                 <h3 className="text-lg font-bold mb-4">Questions 32–35</h3>
@@ -997,7 +996,7 @@ export default function ReadingSection({ onComplete }: ReadingSectionProps) {
                     A bilingual child negotiates with her brother
                   </p>
                   <p className="text-sm">
-                    Faced with her little brother’s refusal to let her play with
+                    Faced with her little brother's refusal to let her play with
                     his toys, a young bilingual child used all of her
                     communication{" "}
                     <input

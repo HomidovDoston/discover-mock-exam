@@ -1,7 +1,7 @@
 export async function send_to_bot(testData: any) {
   try {
     const BOT_TOKEN = "8332729542:AAH819PTU-ql8Am5cRCsF9Y4wDC4V6ZbmvQ";
-    const CHAT_ID = "2016548030";
+    const CHAT_ID = "421001688";
 
     const formatted = formatTestData(testData);
 
